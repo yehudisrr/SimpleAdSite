@@ -24,7 +24,7 @@ namespace SimpleAdsAuth.Web.Controllers
         {
             var db = new AdsDb(_connectionString);
             db.AddUser(user, password);
-            return Redirect("/");
+            return Redirect("/account/login");
         }
 
         public IActionResult Login()
