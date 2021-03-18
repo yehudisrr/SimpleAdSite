@@ -33,6 +33,10 @@ namespace SimpleAdsAuth.Web.Controllers
         }
         public IActionResult NewAd()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return Redirect("/Account/login");
+            }
             return View();
         }
 
